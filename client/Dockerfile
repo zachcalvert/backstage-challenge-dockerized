@@ -10,4 +10,4 @@ COPY package-lock.json /code/package-lock.json
 RUN npm ci
 COPY . /code
 
-CMD [ "npm", "start" ]
+CMD [ "sh", "-c", "npm install && npm run start" ]

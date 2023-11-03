@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+
+import './Difference.css'
 
 export default function Difference() {
   const [number, setNumber] = useState('');
@@ -40,14 +42,14 @@ export default function Difference() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="Form" onSubmit={handleSubmit}>
         <label>
           Enter a number:
           <input type="text" value={number} onChange={(e) => setNumber(e.target.value)} />
         </label>
         <button type="submit">Submit</button>
       </form>
-      <table>
+      <table className="Table">
         <thead>
           <tr>
             <th>Number</th>

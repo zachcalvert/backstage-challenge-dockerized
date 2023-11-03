@@ -2,8 +2,8 @@
 This project is a dockerized version of the backstage technical challenge
 
 ### Local setup
-1. `git clone git@github.com:zachcalvert/backstage-challenge.git`
-2. `cd backstage-challenge`
+1. `git clone git@github.com:zachcalvert/backstage-challenge-dockerized.git`
+2. `cd backstage-challenge-dockerized`
 3. `docker compose build`
 4. `docker compose run --rm manage migrate`
 5. `docker compose up`

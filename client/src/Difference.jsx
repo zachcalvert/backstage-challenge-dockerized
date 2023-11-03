@@ -23,10 +23,16 @@ export default function Difference() {
     e.preventDefault();
     if (number.trim() !== '') {
       const result = await fetchDifference(number);
+
+      // convert to user friendly datetime
+      const date = new Date(result.datetime);
+      const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' };
+      const formattedDate = date.toLocaleDateString(undefined, options);
+
       setData([...data, {
         number: number,
         difference: result.difference,
-        timestamp: result.datetime,
+        timestamp: formattedDate,
         occurrences: result.occurrences,
       }]);
     }

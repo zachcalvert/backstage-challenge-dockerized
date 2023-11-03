@@ -5,8 +5,7 @@ This project is a dockerized version of the backstage technical challenge
 1. `git clone git@github.com:zachcalvert/backstage-challenge-dockerized.git`
 2. `cd backstage-challenge-dockerized`
 3. `docker compose build`
-4. `docker compose run --rm manage migrate`
-5. `docker compose up`
+4. `docker compose up`
 
 - The react client will be available at: http://localhost:3000/
 - The difference endpoint is available at: http://localhost:8000/api/difference?number=10  

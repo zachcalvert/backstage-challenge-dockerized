@@ -31,12 +31,12 @@ export default function Difference() {
       const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' };
       const formattedDate = date.toLocaleDateString(undefined, options);
 
-      setData([...data, {
+      setData([{
         number: number,
         difference: result.difference,
         timestamp: formattedDate,
         occurrences: result.occurrences,
-      }]);
+      }, ...data]);
     }
   };
 
